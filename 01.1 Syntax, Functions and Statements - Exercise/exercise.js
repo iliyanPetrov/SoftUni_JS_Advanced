@@ -9,6 +9,7 @@
 // fruit('apple', 1563, 2.35)
 //---------------------------^^READY
 
+
 //      == 2 ==
 // function greatestCommonDevisor(a, b) {
 //     let gcd = a % b;
@@ -22,8 +23,8 @@
 
 // greatestCommonDevisor(15, 5);
 // greatestCommonDevisor(2154, 458);
-
 //---------------------------^^READY
+
 
 //      == 3 ==
 // function sameNumbers(input) {
@@ -56,12 +57,93 @@
 
 
 //      == 5 ==
-function timeToWalk(steps, footPrint, speed) {
-    let distanceInMeters = steps * footPrint;
-    let speedMetersPerSec = speed / 3.6;
-    let time = distanceInMeters / speedMetersPerSec;
-    let rest = Math.floor(distanceInMeters / 500);
+// function timeToWalk(steps, stepLength, speedKmPH) {
+//     // debugger
+//     let distanceInMeters = steps * stepLength;
+//     let speedMtPerSec = speedKmPH / 3.6;
+//     let timeSeconds = distanceInMeters / speedMtPerSec;
+//     let minutesRest = Math.floor(distanceInMeters / 500);
+//     let totalTime = timeSeconds + minutesRest*60;
+
+//     // CALCULATE TIME
+//     // console.log(timeSeconds, 'seconds')
+//     // console.log(timeSeconds + minutesRest*60, `seconds with ${minutesRest} minutes rest`)
+//     // debugger
+//     let hours = Math.floor(totalTime / 3600);
+//     let minutes = Math.floor((totalTime - hours*3600) / 60);
+//     let seconds = Math.round((totalTime - hours*3600) - minutes*60);
+
+//     let formatedHours = hours > 9 ? `${hours}` : `0${hours}`;
+//     let formatedMinutes = minutes > 9 ? `${minutes}` : `0${minutes}`;
+//     let formatedSeconds = seconds > 9 ? `${seconds}` : `0${seconds}`;
+
+//     // PRINT RESULTS
+//     console.log(`${formatedHours}:${formatedMinutes}:${formatedSeconds}`);
+// }
+// timeToWalk(4000, 0.6, 5);
+// timeToWalk(2564, 0.70, 5.5);
+//---------------------------^^READY
 
 
+//      == 6 ==
+// function roadRadar(speed, area){
+//     speed = Number(speed);
+
+//     let areaLimits = {
+//         'city': 50,
+//         'motorway': 130,
+//         'interstate': 90,
+//         'residential': 20
+//     }
+//     let speedLimit = areaLimits[area];
+//     let difference = speed - speedLimit;
+//     let status = "";
+    
+//     if (difference<=0){
+//         console.log(`Driving ${speed} km/h in a ${speedLimit} zone`);
+//     }else{
+//         if(difference <= 20){
+//             status = 'speeding';
+//         }else if (difference <= 40){
+//             status = 'excessive speeding';
+//         } else {
+//             status = 'reckless driving';
+//         }
+//         console.log(`The speed is ${difference} km/h faster than the allowed speed of ${speedLimit} - ${status}`)
+//     }
+// }
+
+// roadRadar(40, 'city');
+// roadRadar(21, 'residential')
+// roadRadar(120, 'interstate')
+// roadRadar(200, 'motorway')
+//---------------------------^^READY
+
+
+//      == 7 ==
+// function cookingByNumbers(num, ...input){
+//     num = +num;
+//     let commands = {
+//         chop: (number)=> number/2,
+//         dice: (number)=> Math.sqrt(number),
+//         spice: (number)=> number+=1,
+//         bake: (number)=> number*=3,
+//         fillet: (number)=> number*0.8,
+//     }
+//     for (const command of input) {
+//         num = commands[command](num);
+//         console.log(num);
+//     }
+// }
+
+// cookingByNumbers('32', 'chop', 'chop', 'chop', 'chop', 'chop');
+// cookingByNumbers('9', 'dice', 'spice', 'chop', 'bake', 'fillet');
+//---------------------------^^READY
+
+
+//      == 8 ==
+function validityChecker(){
+    let i;
 }
-timeToWalk(4000, 0.6, 5);
+
+validityChecker()
