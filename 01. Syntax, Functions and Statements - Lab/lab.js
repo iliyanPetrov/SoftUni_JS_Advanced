@@ -1,3 +1,4 @@
+//      == 1 ==
 // function echoFunction(input){
 //     let len = input.length;
 //     console.log(len)
@@ -6,8 +7,10 @@
 
 // echoFunction("abc")
 
-//-----------------------------
+//---------------------------^^READY
 
+
+//      == 2 ==
 // function stringLength(str1, str2, str3) {
 //     let sum = [str1, str2, str3].reduce((acc, str) => {
 //         return acc + str.length;
@@ -17,16 +20,20 @@
 // }
 // stringLength('chocolate', 'ice cream', 'cake');
 
-//-------------------------------
+//---------------------------^^READY
 
+
+//      == 3 ==
 // function largestNumber(one, two, three) {
 //     let result = Math.max(one, two, three);
 //     console.log(`The largest number is ${result}.`);
 // }
 // largestNumber(1, 2, 3);
 
-//------------------------------
+//---------------------------^^READY
 
+
+//      == 4 ==
 // function circleArea(input){
 //     let type = typeof input;
 //     let result;
@@ -40,8 +47,10 @@
 
 // circleArea(5)
 
-//------------------------------
+//---------------------------^^READY
 
+
+//      == 5 ==
 // function mathOperations(num1, num2, operator){
 
 //     let result;
@@ -56,8 +65,10 @@
 //     console.log(result);
 // }
 
-//------------------------------
+//---------------------------^^READY
 
+
+//      == 6 ==
 // function sumOfNumbers(n, m){
 
 //     let num1 = +n, num2 = +m, result = 0;
@@ -68,8 +79,10 @@
 
 // sumOfNumbers('-8', 20)
 
-//------------------------------
+//---------------------------^^READY
 
+
+//      == 7 ==
 // function dayOfWeek(day){
 //     let result;
 
@@ -88,10 +101,44 @@
 
 // dayOfWeek(1)
 
-//-------------------------------
+//---------------------------^^READY
 
-function daysInAMonth(month, year){
-    let i;
+//      == 8 ==
+// function daysInAMonth(month, year){
+//     console.log(new Date(year, month, 0).getDate())
+// }
+
+// daysInAMonth(2, 2020)
+
+//---------------------------^^READY
+
+
+//      == 9 ==
+// function squareOfStars(num){
+//     let inputNumber = num || 5;
+//     for (let i = 0; i<inputNumber; i++){
+//         console.log('*'.repeat(inputNumber).split('').join(' '))
+//     }
+// }
+
+// squareOfStars(3)
+//---------------------------^^READY
+
+
+//      == 10 ==
+function aggregateElements(input){
+
+    let sum = 0;
+    for (const element of input) {
+        sum+=element;
+    }
+    console.log(sum);
+    sum = 0;
+    for (const element of input) {
+        sum+=1/element;
+    }
+    console.log(sum)
+    console.log(input.join(''))
 }
 
-daysInAMonth(1, 2021)
+aggregateElements([1, 2, 3])
