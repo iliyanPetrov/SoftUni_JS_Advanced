@@ -13,9 +13,28 @@
 
 
 //      == 2 ==
-function lastKNumbersSequence(input){
+function lastKNumbersSequence(elements, key){
+    let arr = [1];
 
-    let i;
+   // define fn
+   function sum(array){
+	      let result = 0;
+	      for (const num of array){
+		         result += num
+	      }
+	      return result
+    }
+
+   // show results
+   for (let i=1; i<elements; i++){
+	      let prev = [];
+	      for(let j=i-1;j>=i-key;j--){
+	          prev.push(arr[j]||0)
+	      }
+	      arr[i] = sum(prev);
+	      // console.log(arr)
+   }
+   console.log(arr)
 }
 
 lastKNumbersSequence(6, 3)
