@@ -181,32 +181,32 @@
 
 
 //      == 11 ==
-// function equalNeighbours(inputArr){
-//     const neededIterations = inputArr.length - 1
-//     let found = 0;
+function equalNeighbours(inputArr){
+    const neededIterations = inputArr.length - 1
+    let found = 0;
 
-//     for (let index = 0; index < neededIterations; index++) {
-//         const line1 = inputArr[index];
-//         const line2 = inputArr[index + 1];
-//         const iterations = line1.length;
+    for (let index = 0; index < neededIterations; index++) {
+        const line1 = inputArr[index];
+        const line2 = inputArr[index + 1];
+        const iterations = line1.length;
 
-//         for (let i = 0; i < iterations; i++){
-//             if (line1[i] == line2[i]){
-//                 found++;
-//             }
-//         }
+        for (let i = 0; i < iterations; i++){
+            if (line1[i] == line2[i]){
+                found++;
+            }
+        }
         
-//     }
+    }
 
-//     for (const line of inputArr) {
-//         for (let j = 0; j<line.length - 2; j++){
-//             if (line[j] == line[j+1]){
-//                 found++;
-//             }
-//         }
-//     }
-//     console.log(found) // or return found
-// }
+    for (const line of inputArr) {
+        for (let j = 0; j<line.length - 1; j++){
+            if (line[j] == line[j+1]){
+                found++;
+            }
+        }
+    }
+    console.log(found) // or return found
+}
 
 // equalNeighbours(
 //     [['2', '3', '4', '7', '0'],
@@ -221,8 +221,8 @@
 // )
 equalNeighbours(
     [
-        [2, 2, 5, 7, 4],
-        [4, 0, 5, 3, 4],
-        [2, 5, 5, 4, 2]
+        [1,1],
+        [1,2],
+        [4,3]
     ]
-)
+) // expected output --> 2
