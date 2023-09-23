@@ -132,3 +132,72 @@
 
 
 //      == 8 ==
+// function sortBy2Criteria(inputArr) {
+//     return inputArr.sort((a, b) => {
+//         if (a.length !== b.length) {
+//             return a.length - b.length;
+//         } else {
+//             return a.localeCompare(b);
+//         }
+//     }).join('\n');
+// }
+
+// console.log(
+// sortBy2Criteria(
+//     ['Isacc', 
+//     'Theodor', 
+//     'Jack', 
+//     'Harrison', 
+//     'George']
+// ))
+// ----------------------^^Ready
+
+
+//      == 9 ==
+function magicMatrices(inputArr){
+
+    let isMagic = true;
+    let firstRowSum = 0;
+
+    firstRowSum = inputArr[0].reduce((acc, curr) => {
+        return acc + curr;
+    }, firstRowSum);
+
+    for (const line of inputArr) {
+        let currentRowSum = line.reduce((acc, curr) => {
+            return acc + curr;
+        }, 0);
+        // if (currentRowSum !== firstRowSum)
+            // return false;
+    }
+    // IF HERE --> ROWS ARE EQUAL
+
+    // compare columns
+    let iterations = inputArr[0].length - 1;
+    let sumLeft=0;
+    let sumRight=0;
+
+    for(let i=0; i<iterations; i++){
+        for(let j=0; j<inputArr.length; j++){
+            // console.log(`we are currently at No.${i+1} iteration`);
+            // console.log('left col digit=', inputArr[j][i]);
+            // console.log('right col digit=', inputArr[j][i+1]);
+            sumLeft += inputArr[j][i];
+            sumRight += inputArr[j][i + 1];
+        }
+        // console.log(`No.${i+1} iteration ends.`);
+        // console.log(`sumLeft = ${sumLeft}`);
+        // console.log(`sumRight = ${sumRight}`);
+        if (sumLeft !== firstRowSum || sumRight !== firstRowSum)
+            return false;
+        sumLeft = 0;
+        sumRight = 0;
+    }
+    // OUTPUT
+    return isMagic;
+}
+console.log(magicMatrices([
+    [1,2,3],
+    [2,3,1],
+    [3,1,2]
+]))
