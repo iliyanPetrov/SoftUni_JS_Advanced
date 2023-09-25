@@ -167,8 +167,8 @@ function magicMatrices(inputArr){
         let currentRowSum = line.reduce((acc, curr) => {
             return acc + curr;
         }, 0);
-        // if (currentRowSum !== firstRowSum)
-            // return false;
+        if (currentRowSum !== firstRowSum)
+            return false;
     }
     // IF HERE --> ROWS ARE EQUAL
 
@@ -201,3 +201,4 @@ console.log(magicMatrices([
     [2,3,1],
     [3,1,2]
 ]))
+// ----------------------^^Ready
