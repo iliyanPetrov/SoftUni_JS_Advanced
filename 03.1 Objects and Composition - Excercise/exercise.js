@@ -35,8 +35,12 @@
 
 
 //      == 3 ==
-function carFactory() {
-    let i;
+function carFactory(input) {
+    let result = {
+        model: `${input.model}`,
+
+    }
+    let power = input.power
 }
 carFactory({
     model: "VW Golf II",
