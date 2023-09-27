@@ -40,7 +40,8 @@ function carFactory(input) {
         model: `${input.model}`,
 
     }
-    let power = input.power
+    let power = input.power;
+    console.log(power > 90 ? input.power : 120 ? 200 : null)
 }
 carFactory({
     model: "VW Golf II",
