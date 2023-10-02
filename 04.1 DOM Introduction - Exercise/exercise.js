@@ -1,8 +1,9 @@
 
 //      == 1 ==
-function something(){
+// function subtraction(){
 
-    let i;
-}
+//     let num1 = document.querySelector('firstNumber');
+//     let num2 = document.querySelector('secondNumber');
+// }
 
-something()
+// subtraction()
