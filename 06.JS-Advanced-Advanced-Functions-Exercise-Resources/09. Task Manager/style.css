@@ -59,6 +59,12 @@ section {
     flex-grow: 1;
     margin: 2px;
 }
+@media only screen and (max-width: 800px) {
+    section {
+        max-width: 88%;
+        margin: 0 auto;
+    }
+  }
 
 article {
     margin: 5px;
@@ -88,11 +94,11 @@ input, textarea {
 }
 
 button {
-    padding: 3px;
+    padding: 3px 15px;
     margin: 5px;
     border: 1px solid black;
-    border-radius: 5px;
-    font-size: 0.75rem;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
 form button {
@@ -110,6 +116,14 @@ form button {
     width: 90%;
     background-color: #889fab;
 }
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-around;
+
+    }
+  }
 
 .gray {
     background-color: #3d474d;
